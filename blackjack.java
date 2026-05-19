@@ -185,6 +185,8 @@ public class blackjack extends games {
 
 
     public void startGame() {
+        
+        achieve.unlockAchievement(0); 
 
         System.out.println("[ BlackJack 게임 플레이 ]");
         roundset();
