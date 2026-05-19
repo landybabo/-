@@ -57,7 +57,7 @@ public class achieve {
     private static boolean[] achievements = new boolean[ACHIEVEMENT_COUNT];
 
     public void unlockAchievement(int index) {
-        if (index >= 0 && index < achievements.length) {
+        if (index >= 0 && index < achievements.length && achievements[index] != true) {
             achievements[index] = true;
             System.out.println("[알림] " + index + "번 업적 달성!");
         }
