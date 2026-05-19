@@ -56,7 +56,7 @@ public class achieve {
     // face 클래스 등에서 static으로 쉽게 접근할 수 있도록 인스턴스 배열을 static으로 변경하거나 관리
     private static boolean[] achievements = new boolean[ACHIEVEMENT_COUNT];
 
-    public void unlockAchievement(int index) {
+    public static void unlockAchievement(int index) {
         if (index >= 0 && index < achievements.length && achievements[index] != true) {
             achievements[index] = true;
             System.out.println("[알림] " + index + "번 업적 달성!");
