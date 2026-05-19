@@ -3,13 +3,14 @@ package game;
 import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.Scanner;
+//bot 을 조만간 더 잘구현하겠습니다..
 
 public class yatch extends games{
     SecureRandom rand = new SecureRandom();
     Scanner input = new Scanner(System.in);
 
     int[] your_score = new int[12];
-    int[] bot_score = new int[12]; //이거 써야되는디..
+    int[] bot_score = new int[12]; //이거 써야되는디.. < 썻음 근데 좀 얘가 많이 멍청함
     boolean[] is_your_score_empty = new boolean[12];
     boolean[] is_bot_score_empty = new boolean[12];
     int[] current_dice = new int[5];
@@ -106,7 +107,7 @@ public class yatch extends games{
                 is_your_score_empty[where - 1] = false;
                 break;
             case 10:
-                // 레전드로 우아한 bitwise 연산 하나 끓여오기
+                // 레전드로 우아한 bitwise 연산 하나 끓여오기, 다시 봐도 이쁨.. 시스템프로그래밍 체고
                 int bitmask = 0;
                 for (int i = 0; i < 5; i++) {
                     bitmask |= (1 << current_dice[i]);
